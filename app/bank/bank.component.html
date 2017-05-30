@@ -1,0 +1,52 @@
+<h1>SGP - Saisie des coordonnées bancaires</h1>
+
+<div id="search">
+
+	<span>Filtrer par département :</span>
+	<select>
+		<option ng-repeat="departement in $ctrl.departements track by $index" value="{{ departement.nom }}">{{ departement.nom }}</option>
+	</select>
+
+	<span>Rechercher par nom</span>
+
+</div>
+
+
+
+
+
+
+
+
+<div id="display">
+
+	<table class="table table-striped">
+		<thead>
+            <tr>
+                <th>Matricule</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+            </tr>
+        </thead>
+        <tbody>
+        	<tr ng-repeat="collaborateur in $ctrl.collaborateurs track by $index">
+        		<td>{{ collaborateur.matricule }}</td>
+        		<td>{{ collaborateur.nom }}</td>
+        		<td>{{ collaborateur.prenom }}</td>
+        	</tr>
+        </tbody>
+	</table>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div id="edition">
+
+</div>
